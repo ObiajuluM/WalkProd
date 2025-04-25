@@ -1,0 +1,19 @@
+install shorebird:
+dart pub global activate shorebird
+
+
+init shorebird
+shorebird init
+
+
+📦 To create a new release use: "shorebird release".
+
+shorebird release android --artifact=apk
+
+
+🚀 To push an update use: "shorebird patch".
+👀 To preview a release use: "shorebird preview".
+
+shorebird patch --platforms=android --release-version=0.1.0+1
+
+Note: shorebird patch --platforms=android without the --release-version option will patch the current version of the app.

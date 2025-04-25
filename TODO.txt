@@ -1,0 +1,15 @@
+TODO: use stream builder to wrap methods for seamless builds, while using django websockets or signals
+
+remove action slide package
+
+web sockets for semaless data retrieval
+
+in app blog
+
+on device caching
+Add deep linking for blog and referral
+
+https://stackoverflow.com/questions/70779229/how-to-make-flutter-run-on-gpu-1
+where flutter
+where java
+where dart
