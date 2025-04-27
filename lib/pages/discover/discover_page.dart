@@ -16,7 +16,7 @@ class DiscoverPage extends ConsumerWidget {
             end: Alignment.bottomLeft,
             colors: Theme.of(context).brightness == Brightness.light
                 ? [
-                    const Color.fromRGBO(65, 115, 243, 1),
+                    Color.fromRGBO(65, 115, 243, 1),
                     const Color.fromRGBO(112, 172, 185, 1),
                     const Color.fromRGBO(241, 109, 117, 1),
                   ]
