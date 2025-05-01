@@ -1,9 +1,6 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:walkit/background/step_process_foreground_task.dart';
-import 'package:walkit/global/helper_methods.dart';
 import 'package:walkit/global/view/provider.dart';
 import 'package:walkit/modules/backend/providers.dart';
 import 'package:walkit/pages/discover/discover_page.dart';
