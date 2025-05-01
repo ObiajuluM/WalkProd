@@ -13,6 +13,8 @@ Walk It bridges fitness and blockchain by allowing users to track their steps an
 - 🔒 **Private Beta Waitlist (Now Live!)**  
 - 📈 **On-chain Leaderboards**
 
+## 🌐[BACKEND](https://github.com/ObiajuluM/walkitbackend)
+Github Repo for Walk It backend
 
 ## 🌐 Live Links
 - 🔗 [Waitlist Form](https://forms.gle/FBK8J85hWhUKZd3G7)  
