@@ -4,7 +4,6 @@ import 'package:appcheck/appcheck.dart';
 import 'package:health/health.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-
 healthConnectInstallPrompt(Health health) async {
   //  android only
   if (await health.isHealthConnectAvailable() == false) {
@@ -22,6 +21,9 @@ Future<bool> hasHealthConnect(Health health) async {
   try {
     enabled =
         await AppCheck().isAppEnabled("com.google.android.apps.healthdata");
+
+    // enabled =
+    //     await AppCheck().isAppInstalled("com.google.android.apps.healthdata");
   } catch (e) {
     log(e.toString());
   }

@@ -85,14 +85,15 @@ class Explore extends ConsumerWidget {
                       );
                     }
                   }
-                : index == 3
+                : index == 1
                     ? () async {
                         try {
-                          await shareText(
-                            message:
-                                'Hi, I am inviting you to Walk It. A web3 app that rewards you to walk - Use my code ${user.invite_code} after you sign up to receive a bonus',
-                            subject: "Invitation",
-                          );
+                          launchIt("https://x.com/walkitapp");
+                          // await shareText(
+                          //   message:
+                          //       'Hi, I am inviting you to Walk It. A web3 app that rewards you to walk - Use my code ${user.invite_code} after you sign up to receive a bonus',
+                          //   subject: "Invitation",
+                          // );
                         } catch (e) {
                           log(
                             "an error occurred",
@@ -101,32 +102,48 @@ class Explore extends ConsumerWidget {
                           );
                         }
                       }
-                    : () {
-                        ScaffoldMessenger.of(context).clearSnackBars();
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            backgroundColor:
-                                Theme.of(context).brightness == Brightness.light
+                    : index == 3
+                        ? () async {
+                            try {
+                              await shareText(
+                                message:
+                                    'Hi, I am inviting you to Walk It. A web3 app that rewards you to walk - Use my code ${user.invite_code} after you sign up to receive a bonus',
+                                subject: "Invitation",
+                              );
+                            } catch (e) {
+                              log(
+                                "an error occurred",
+                                error: e,
+                                name: "share plus package error",
+                              );
+                            }
+                          }
+                        : () {
+                            ScaffoldMessenger.of(context).clearSnackBars();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                backgroundColor: Theme.of(context).brightness ==
+                                        Brightness.light
                                     ? Colors.white
                                     : const Color(0xFF21272B),
-                            content: Text(
-                              "Coming Soon!",
-                              style: TextStyle(
-                                color: Theme.of(context).brightness ==
-                                        Brightness.light
-                                    ? Colors.black87
-                                    : Colors.white70,
+                                content: Text(
+                                  "Coming Soon!",
+                                  style: TextStyle(
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.light
+                                        ? Colors.black87
+                                        : Colors.white70,
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        );
-                      },
+                            );
+                          },
             onTapDown: null,
             child: Icon(
               index == 0
                   ? LineIcons.running
                   : index == 1
-                      ? Icons.wifi_calling_3_outlined
+                      ? LineIcons.twitter
                       : index == 2
                           ? LineIcons.gifts
                           : Icons.group_add_outlined,

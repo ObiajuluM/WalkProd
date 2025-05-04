@@ -95,7 +95,7 @@ class LeaderboardPage extends ConsumerWidget {
                                     : Color((math.Random().nextDouble() *
                                                 0xFFFFFF)
                                             .toInt())
-                                        .withOpacity(0.1),
+                                        .withOpacity(0.4),
                         leading: RandomAvatar(
                           snapshot.data!.elementAt(index).display_name!,
                           height: 34,
@@ -105,8 +105,13 @@ class LeaderboardPage extends ConsumerWidget {
                           snapshot.data!.elementAt(index).display_name!,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            color: Color.fromRGBO(82, 82, 82, 1),
+                          style: TextStyle(
+                            // color: Color.fromRGBO(82, 82, 82, 1),
+
+                            color:
+                                Theme.of(context).brightness == Brightness.light
+                                    ? const Color.fromRGBO(82, 82, 82, 1)
+                                    : Color.fromARGB(255, 221, 220, 220),
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
                             height: 0,

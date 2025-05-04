@@ -63,7 +63,7 @@ class SplashSecondPage extends ConsumerWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 25),
             child: const Text(
-              'Install Google Fit and connect it to Health Connect. Make sure your phone is connected to the internet to sync your steps.',
+              'Install Google Fit, Connect to and update Health Connect. Make sure your phone is connected to the internet to sync your steps.',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
