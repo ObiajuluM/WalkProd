@@ -58,13 +58,19 @@ Future<int> getBackgroundStepCount() async {
       endTime: now,
       types: kdataTypes,
       recordingMethodsToFilter: [
-        // TODO: come back to this later there is an issue here: https://pub.dev/packages/health
+        // TODO: come back to this later there is an issue here: https://pub.dev/packages/health, the below types of recording methods are not working
+
+        //TODO: filter out steps from different providers  "source_platform": "appleHealth",
         // RecordingMethod.unknown,
         // RecordingMethod.manual,
         // RecordingMethod.automatic,
         // RecordingMethod.active,
       ],
     );
+
+// TODO: look into this 2 methods and any more if available
+    // health.getHealthAggregateDataFromTypes(types: types, startDate: startDate, endDate: endDate);
+    // health.getTotalStepsInInterval(startTime, endTime)
 
     for (var steps in healthSteps) {
       stepCount += steps.value.toJson()["numericValue"] as int;

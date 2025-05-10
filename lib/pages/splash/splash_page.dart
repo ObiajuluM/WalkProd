@@ -119,7 +119,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                     enableDrag: true,
                     showDragHandle: true,
                     useSafeArea: true,
-                    
+
                     // backgroundColor: Colors.white,
 
                     context: context,
@@ -201,8 +201,9 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                                 ),
                               ),
                             )
+                          // TODO: add a url to google play store to update health connect
                           : const Text(
-                              "Please allow all permissions and enable health connect!",
+                              "Please allow all permissions and UPDATE health connect!",
                               style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
                                 fontSize: 20,

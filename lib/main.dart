@@ -19,6 +19,11 @@ import 'package:walkit/themes/dark.dart';
 import 'package:walkit/themes/light.dart';
 import 'package:walkit/themes/theme_provider.dart';
 
+// TODO: i think using health connect will be somewhat inconsistent because the heallth connect pull step providers together and doesnt neccesarry aggregate the data from the different providers.
+// TODO: ie: fit = 100 steps, samsung health = 200 steps, but helth connect might only show fit steps and not samsung steps
+
+//TODO: health package needs proper looking into to avoid gaming the system.
+
 Future<void> main() async {
   //
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +35,7 @@ Future<void> main() async {
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // streamed: might remove
-   retrieveAccessTokenFromLocal();
+  retrieveAccessTokenFromLocal();
 
   // set status bar color and nav bar color
   SystemChrome.setSystemUIOverlayStyle(
