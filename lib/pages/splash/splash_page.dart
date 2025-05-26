@@ -4,6 +4,7 @@ import 'package:flutter_animated_icons/icons8.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lottie/lottie.dart';
 import 'package:walkit/global/constants.dart';
+import 'package:walkit/global/helper_methods.dart';
 import 'package:walkit/modules/auth/authentication.dart';
 import 'package:walkit/modules/auth/google_auth.dart';
 import 'package:walkit/pages/splash/components/first_page.dart';
@@ -202,12 +203,18 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                               ),
                             )
                           // TODO: add a url to google play store to update health connect
-                          : const Text(
-                              "Please allow all permissions and UPDATE health connect!",
-                              style: TextStyle(
-                                color: Color.fromRGBO(255, 255, 255, 1),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          : InkWell(
+                              onTap: () => launchIt(
+                                "https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata",
+                              ),
+                              child: const Text(
+                                "Please allow all permissions and UPDATE health connect!",
+                                style: TextStyle(
+                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                     );

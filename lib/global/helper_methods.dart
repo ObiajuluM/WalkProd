@@ -68,7 +68,7 @@ Future<int> getBackgroundStepCount() async {
       ],
     );
 
-// TODO: look into this 2 methods and any more if available
+    // TODO: look into this 2 methods and any more if available
     // health.getHealthAggregateDataFromTypes(types: types, startDate: startDate, endDate: endDate);
     // health.getTotalStepsInInterval(startTime, endTime)
 
