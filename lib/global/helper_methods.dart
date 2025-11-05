@@ -81,6 +81,8 @@ Future<int> getBackgroundStepCount() async {
   return stepCount;
 }
 
+
+
 // get steps from the health plugin provider
 Future<int> getStepsFromProvider() async {
   bool hasPermission = false;

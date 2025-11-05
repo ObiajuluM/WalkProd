@@ -33,7 +33,7 @@ class HealthDataProvider extends StateNotifier<Map<String, int>> {
     //         endTime: now,
     //         types: kdataTypes,
     //         recordingMethodsToFilter: [
-    //           // TODO: come back to this later there is an issue here: https://pub.dev/packages/health
+              // TODO: come back to this later there is an issue here: https://pub.dev/packages/health
     //           // RecordingMethod.unknown,
     //           // RecordingMethod.manual,
     //           // RecordingMethod.automatic,

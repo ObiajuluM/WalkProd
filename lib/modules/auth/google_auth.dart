@@ -17,7 +17,7 @@ Future<String?> signInWithGoogle() async {
     final GoogleSignInAuthentication gAuth = await gUser!.authentication;
 
     /// sign in with firbase for user log
-    // create a new user credential
+    /// create a new user credential
     final credential = GoogleAuthProvider.credential(
       accessToken: gAuth.accessToken,
       idToken: gAuth.idToken,
